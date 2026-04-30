@@ -1,15 +1,14 @@
 ---
-date: '2025-08-04'
+date: '2024-08-04'
 title: Configuring oTEL to collect OpenShift Logs
-tags: ["Observability"]
+tags: ["Observability", "ROSA HCP"]
 authors:
   - Paul Czarkowski
+validated_version: "4.21"
 ---
 
-{{% alert state="warning" %}}
-The Filelog and JournalD Receivers are a Technology Preview feature only. Technology Preview features are not supported with Red Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.
-
-For more information about the support scope of Red Hat Technology Preview features, see [Technology Preview Features Support Scope](https://access.redhat.com/support/offerings/techpreview/?extIdCarryOver=true&sc_cid=701f2000001Css5AAC).
+{{% alert state="info" %}}
+The Filelog and JournalD Receivers became Generally Available (GA) in OpenShift 4.21, providing full production support with Red Hat SLAs.
 {{% /alert %}}
 
 OpenShift's **Cluster Log Forwarder (CLF)** is the traditional way to collect the cluster's **Audit**, **Infrastructure**, and **Application** logs and forward them to a SIEMs or other central system for log aggregation and visibility.  However the **oTEL Operator** is a bit more flexible, especially when it comes to the output options, for instance the CLF system does not support exporting to **AWS S3**.
