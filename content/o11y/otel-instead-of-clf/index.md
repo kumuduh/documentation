@@ -4,6 +4,7 @@ title: Configuring oTEL to collect OpenShift Logs
 tags: ["Observability", "ROSA HCP"]
 authors:
   - Paul Czarkowski
+  - Kumudu Herath
 validated_version: "4.21"
 ---
 
@@ -169,6 +170,7 @@ If you are familiar with Helm, we recommend you go with Option 1 below, if you a
 
     ```bash
     oc -n opentelemetry-logging rollout status ds/ocp-otel-logging-collector
+    ```
 
     ```
     daemon set "ocp-otel-logging-collector" successfully rolled out
